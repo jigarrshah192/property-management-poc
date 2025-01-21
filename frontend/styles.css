@@ -1,0 +1,137 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.upload-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.upload-container h2 {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.uploaded-files {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    padding: 10px;
+}
+
+.uploaded-files li {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.chat-container {
+    display: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container h2 {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.chat-log {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.chat-log .message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.chat-log .message.user {
+    justify-content: flex-end;
+}
+
+.chat-log .message.bot {
+    justify-content: flex-start;
+}
+
+.chat-log .message span {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #eef0fc;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.chat-log .message.user span {
+    background-color: #d1f7ff;
+    text-align: left;
+}
+
+.chat-log .message.bot span {
+    background-color: #eef0fc;
+    text-align: left;
+}
+
+.chat-log .message .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.chat-log .message.user .avatar {
+    background-color: #007bff;
+    margin-left: 10px;
+    order: 2;
+}
+
+.chat-log .message.bot .avatar {
+    background-color: #6c757d;
+    margin-right: 10px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}

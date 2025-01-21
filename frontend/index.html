@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Chat Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Upload Section -->
+        <div class="upload-container">
+            <h2>Upload Property Documents</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="files" class="form-label">Select Documents</label>
+                    <input type="file" class="form-control" id="files" name="files" multiple required>
+                    <ul id="uploadedFiles" class="uploaded-files d-none"></ul>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <button type="submit" class="btn btn-primary me-2">
+                        <span id="uploadButtonText">Upload</span>
+                        <span id="uploadLoader" class="spinner-border spinner-border-sm d-none" role="status"
+                            aria-hidden="true"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-container" id="chatSection">
+            <h2>Chat Assistant</h2>
+            <div id="chatLog" class="chat-log"></div>
+            <div class="chat-input">
+                <input type="text" id="userInput" class="form-control" placeholder="Type your question..." required
+                    disabled>
+                <button id="sendButton" class="btn btn-primary" disabled>
+                    <span id="buttonText">Send</span>
+                    <span id="buttonLoader" class="spinner-border spinner-border-sm d-none" role="status"
+                        aria-hidden="true"></span>
+                </button>
+                <button id="resetButton" class="btn btn-danger ms-2" disabled>Reset Chat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
